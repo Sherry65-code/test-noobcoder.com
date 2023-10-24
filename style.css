@@ -1,0 +1,203 @@
+@font-face {
+    font-family: 'nunito';
+    src: url('assets/Nunito.ttf');
+}
+
+* {
+    font-family: 'nunito';
+    color: white;
+    --header-color: #0d1b2a;
+    --background-color: #1b263b;
+    --menubar-color: #415a77;
+    --button-color: #778da9;
+}
+
+*::selection {
+    background-color: black;
+    color: white;
+}
+
+body {
+    background-color: var(--background-color);
+    margin: 0;
+    overflow: hidden; 
+}
+
+#body {
+    left: 0px;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    transition: all ease-in-out 0.4s;
+}
+
+#header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5px 20px;
+    background-color: var(--header-color);
+}
+
+#header h1 {
+    padding-left: 20px;
+}
+
+#menu-button {
+    background-color: transparent;
+    border: 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1;
+    cursor: pointer;
+    transition: all ease-in-out 0.4s;
+    transform: rotateZ('360deg');
+}
+
+#menu-button:hover {
+    background-color: rgba(255, 255, 255, 0.226);
+}
+
+#menubar {
+    position: absolute;
+    width: 300px;
+    top: 0;
+    bottom: 0;
+    left: -300px;
+    background-color: var(--menubar-color);
+    transition: all ease-in-out 0.4s;
+}
+
+#card {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('images/banner.jpg');
+    background-position: left;
+    background-size: cover;
+    cursor: pointer;
+}
+
+
+#card img {
+    border-radius: 50%;
+    height: 100px;
+}
+#card span {
+    font-size: 30px;
+    font-weight: 600;
+    padding-top: 10px;
+}
+
+#menu-items button {
+    width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: left;
+    color: white;
+    background-color: transparent;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#menu-items button:hover {
+    background-color: rgba(255, 255, 255, 0.151);
+    padding-inline-start: 20px;
+}
+#page {
+    right: 0;
+    top: 98px;
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    padding: 20px;
+    text-align: left;
+    font-size: 18px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+#page p {
+    max-width: 1580px;
+}
+
+#page img {
+    height: 80px;
+    border-radius: 12px;
+}
+
+#page .small {
+    height: 150px;
+
+}
+
+#page .medium {
+    height: 250px;
+
+}
+
+#page .large {
+    height: 400px;
+
+}
+
+#page button {
+    background-color: var(--button-color);
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: large;
+    transition: all ease-in-out 0.2s;
+}
+
+#page button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 20px 0px black;
+}
+
+#page button img {
+    height: 30px;
+    padding-right: 10px;
+}
+
+#page .discord {
+    background-color: #5562EA;
+}
+
+#page .youtube {
+    background-color: #FF0000;
+}
+
+::-webkit-scrollbar {
+    background-color: var(--background-color);
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--menubar-color);
+    border: 2px solid var(--background-color);
+    border-radius: 8px;
+}
